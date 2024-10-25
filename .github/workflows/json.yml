@@ -1,0 +1,10 @@
+name: json
+on: push
+
+jobs:
+    json:
+        runs-on: ubuntu-latest
+        steps:
+            - run: "${CONTEXT}"
+        env:
+            CONTEXT: ${{ toJSON(github)}}
