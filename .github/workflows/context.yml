@@ -1,0 +1,9 @@
+name: context
+on: push
+
+jobs:
+    context:
+        runs-on: ubuntu-latest
+        steps:
+            - run: "echo ${{github.actor}}"
+            - run: "echo ${{github.graphql_url}}"
