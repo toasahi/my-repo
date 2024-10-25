@@ -1,0 +1,12 @@
+name: compare
+on: push
+
+jobs:
+    compare:
+        runs-on: ubuntu-latest
+        steps:
+            - run: printenv | grep '_FUNC'
+        env:
+            CON_FUNC: ${{contains('hello','llo')}}
+            START_FUNC: ${{startsWith('hello','he')}}
+            END_FUNC: ${{contains('hello','llo')}}
