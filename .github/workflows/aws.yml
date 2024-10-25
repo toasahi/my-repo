@@ -1,0 +1,8 @@
+name: aws
+on: push
+
+jobs:
+    aws:
+        runs-on: ubuntu-latest
+        steps:
+            - run: aws -v
