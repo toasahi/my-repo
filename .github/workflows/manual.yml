@@ -7,6 +7,12 @@ on:
                 default: Hello
                 required: true
                 description: A cheerful word
+            choise:
+                type: choice
+                options:
+                    - info
+                    - warn
+                    - error
 
 
 jobs:
