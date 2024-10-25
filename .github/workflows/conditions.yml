@@ -1,0 +1,16 @@
+name: conditions
+on: 
+    workflow_dispatch:
+        inputs:
+            conditions:
+                type: choice
+                options:
+                    - info
+                    - warn
+                    - error
+jobs:
+    conditions:
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo "Hello"
+              if: ${{ contains(${inputs.conditions},'info')}}
