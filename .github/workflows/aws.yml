@@ -5,4 +5,4 @@ jobs:
     aws:
         runs-on: ubuntu-latest
         steps:
-            - run: aws -v
+            - run: aws --version
