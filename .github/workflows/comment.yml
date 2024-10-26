@@ -8,6 +8,6 @@ jobs:
             contents: read # ソースコードの読み込みを許可
         steps:
             - uses: actions/checkout@v4
-            - run: gh pr comment "${{github.head_ref}}" --body "Hello"
+            - run: gh pr comment "${{github.head_ref}}" --body "Hello Main"
               env:
                 GITHUB_TOKEN: ${{github.token}}
