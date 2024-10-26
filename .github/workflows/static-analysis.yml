@@ -1,7 +1,7 @@
 name: Static analysis
 on:
     pull_request:
-        paths: ['github/**/*.ya?ml']
+        paths: ['github/**/*.yaml','github/**/*.yml']
 defaults:
     run:
         shell: bash
