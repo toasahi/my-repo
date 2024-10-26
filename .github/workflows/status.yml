@@ -1,0 +1,12 @@
+name: status
+run-name: Run by @${{github.actor}}
+on: push
+
+jobs:
+    status:
+        runs-on: ubuntu-latest
+        steps:
+            - run: exit 1
+            - run: echo "hello"
+              if: ${{failure()}}
+            - run: echo "failure"
