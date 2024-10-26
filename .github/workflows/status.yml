@@ -4,9 +4,9 @@ on: push
 
 jobs:
     status:
+        name: job name
+        if: ${{ github.actor == 'toasahi'}}
         runs-on: ubuntu-latest
         steps:
-            - run: exit 1
-            - run: echo "hello"
-              if: ${{failure()}}
-            - run: echo "failure"
+            - name: step name
+              run: echo "allways"
