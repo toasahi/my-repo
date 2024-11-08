@@ -1,0 +1,16 @@
+name: debug
+on: push
+
+defaults:
+    run:
+        shell: bash
+concurrency:
+    group: ${{github.workflow}}
+    cancel-in-progress: true
+
+jobs:
+    log:
+        timeout-minutes: 30
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo "::debug::This is a debug log"
